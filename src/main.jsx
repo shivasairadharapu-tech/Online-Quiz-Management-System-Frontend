@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import axios from 'axios';
 import './style.css';
 
-const API = 'http://localhost:8080/api';
+const API = import.meta.env.VITE_API_URL || 'https://online-quiz-management-system-backend-3.onrender.com/api';
 const api = axios.create({ baseURL: API });
 
 function App() {
