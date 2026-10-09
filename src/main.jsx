@@ -5,6 +5,11 @@ import './style.css';
 
 const API = import.meta.env.VITE_API_URL || 'https://online-quiz-management-system-backend-3.onrender.com/api';
 const api = axios.create({ baseURL: API });
+const result=await axios.post("http://localhost:8080/login", data)
+const result=await axios.post(
+  "https:/online-quiz-management-system-backend-3.onrender.com/login",
+  data
+)
 
 function App() {
   const [user, setUser] = useState(() => JSON.parse(localStorage.getItem('quizUser') || 'null'));
